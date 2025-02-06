@@ -1,0 +1,13 @@
+diff --git a/node_modules/@nativescript/core/ui/action-bar/index.ios.js b/node_modules/@nativescript/core/ui/action-bar/index.ios.js
+index 2b07144..109d919 100644
+--- a/node_modules/@nativescript/core/ui/action-bar/index.ios.js
++++ b/node_modules/@nativescript/core/ui/action-bar/index.ios.js
+@@ -374,7 +374,7 @@ export class ActionBar extends ActionBarBase {
+                 if (navBar.standardAppearance) {
+                     // Not flat and never been set do nothing.
+                     const appearance = navBar.standardAppearance;
+-                    appearance.shadowColor = UINavigationBarAppearance.new().shadowColor;
++                    appearance.shadowColor = UIColor.clearColor;
+                     this._updateAppearance(navBar, appearance);
+                 }
+             }
