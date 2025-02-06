@@ -1,12 +1,14 @@
 <script lang="ts" setup>
-import { ref } from 'nativescript-vue';
+import { ref, $navigateBack } from 'nativescript-vue';
 import { enableLargeTitle } from './util';
 const items = ref([1, 2, 3, 4]);
 </script>
 
 <template>
   <Page @loaded="enableLargeTitle">
-    <ActionBar title="Color Detail" />
+    <ActionBar title="Color Detail">
+      <NavigationButton text="Colors" android:icon="~/back.png" @tap="$navigateBack" />
+    </ActionBar>  
     <CollectionView :items="items" iosOverflowSafeArea="true" scrollBarIndicatorVisible="false" class="pb-4">
       <template #default="{ item }">
         <StackLayout>

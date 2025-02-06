@@ -33,7 +33,9 @@ export class NavComponent {
 }
 
 @Component({
-  template: `<ActionBar title="Color Detail"></ActionBar>
+  template: `<ActionBar title="Color Detail">
+    <NavigationButton text="Colors" android:icon="~/back.png" (tap)="router.back()" />
+  </ActionBar>
     <CollectionView [items]="[1, 2, 3, 4]" iosOverflowSafeArea="true" scrollBarIndicatorVisible="false" class="pb-4">
       <ng-template let-item="item">
         <StackLayout>
@@ -47,6 +49,7 @@ export class NavComponent {
 })
 export class DetailComponent {
   page = inject(Page);
+  router = inject(RouterExtensions);
   activeRoute = inject(ActivatedRoute);
   color: string;
   constructor() {
