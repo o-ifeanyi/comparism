@@ -1,0 +1,24 @@
+{
+  "name": "vue3",
+  "main": "src/app.ts",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@nativescript-community/ui-collectionview": "^6.0.4",
+    "@nativescript/core": "~8.8.0",
+    "nativescript-vue": "3.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@nativescript/android": "~8.8.0",
+    "@nativescript/ios": "~8.8.0",
+    "@nativescript/tailwind": "~2.1.0",
+    "@nativescript/types": "~8.8.0",
+    "@nativescript/webpack": "~5.0.0",
+    "@types/node": "~17.0.21",
+    "patch-package": "^8.0.0",
+    "tailwindcss": "^3.4.3",
+    "typescript": "~5.7.0"
+  }
+}
